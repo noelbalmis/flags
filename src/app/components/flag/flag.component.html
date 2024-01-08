@@ -1,0 +1,15 @@
+<div class="flex flex-col items-center">
+    <picture>
+        <source
+          type="image/webp"
+          [srcset]="'https://flagcdn.com/w160/' + code + '.webp, https://flagcdn.com/w320/' + code + '.webp 2x'">
+        <source
+          type="image/png"
+          [srcset]="'https://flagcdn.com/w160/' + code + '.png, https://flagcdn.com/w320/' + code + '.png 2x'">
+        <img
+          [src]="'https://flagcdn.com/w160/' + code + '.png'"
+          width="160"
+          [alt]="name">
+      </picture>
+    <p>{{name}}</p>    
+</div>

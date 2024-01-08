@@ -1,0 +1,14 @@
+<main class="flex flex-col items-center py-12 gap-12">
+    <div class="flex flex-col items-center w-full gap-4">
+        <h1 class="font-bold">Flags 🌎</h1>
+        <input class="w-1/4 border rounded-md px-4 py-2" type="text" placeholder="Search a flag"
+            (input)="filterCountries(countryInput.value)" #countryInput>
+    </div>
+    <section class="flex flex-wrap justify-center items-center gap-8">
+        @for (country of countries; track country.code) {
+        <app-flag [code]="country.code" [name]="country.name" />
+        }
+    </section>
+</main>
+
+<router-outlet></router-outlet>
